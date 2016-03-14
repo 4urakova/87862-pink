@@ -1,12 +1,266 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
   </head>
+
   <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+    <header class="main-header">
+ <!-- <div class="container"> Не знаю, зачем, пусть пока будет-->
+
+        <section class="logo-text">
+          <img src="http://placehold.it/80x50" width="80" height="50" alt="PINK лого">
+        </section>
+
+        <nav class="main-menu">
+          <div class="main-menu__toggle  main-menu__toggle--closed">
+            Открыть меню
+          </div>
+          <div class="main-menu__wrapper  main-menu__wrapper--closed">
+            <ul class="main-menu__list">
+              <li class="main-menu__item  main-menu__item--active">
+                Информация
+              </li>
+              <li class="main-menu__item">
+                <a href="#">
+                  Возможности
+                </a>
+              </li>
+              <li class="main-menu__item">
+                <a href="#">
+                  Отзывы
+                </a>
+              </li>
+              <li class="main-menu__item">
+                <a href="#">
+                  Стоимость
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <section class="main-promo">
+          <div class="main-promo__text">
+            Взгляни на жизнь иначе!
+          </div>
+          <div class="main-promo__image">
+            <img src="http://placehold.it/280x280" width="280" height="280" alt="PINK промо">
+          </div>
+          <a href="#" class="main-promo__button">
+            Скачать приложение
+          </a>
+          <div class="main-promo__systems">
+            <a href="#" class="main-promo__system">
+              <img src="http://placehold.it/60x60" width="60" height="60" alt="Apple">
+            </a>
+            <a href="#" class="main-promo__system">
+              <img src="http://placehold.it/60x60" width="60" height="60" alt="Android">
+            </a>
+            <a href="#" class="main-promo__system">
+              <img src="http://placehold.it/60x60" width="60" height="60" alt="Windows">
+            </a>
+          </div>
+          <p class="main-promo__text  main-promo__text--note">
+            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+          </p>
+        </section>
+
+ <!-- </div> -->
+    </header>
+
+    <main class="main-info">
+
+      <header class="main-info__header">
+        <p class="main-info__slogan">
+          Устали от серости мегаполиса?
+        </p>
+        <p class="main-info__slogan">
+          Нам есть, что Вам предложить!
+        </p>
+      </header>
+
+      <section class="features">
+        <div class="features__feature">
+          <h3>
+            Поднимает настроение
+          </h3>
+          <p class="features__intro">
+            Приложение позволит вам победить осеннюю хандру и депрессию буквально в нескольео кликов!
+          </p>
+        </div>
+        <div class="features__feature">
+          <h3>
+            Меняет мир вокруг
+          </h3>
+          <p class="features__intro">
+            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+          </p>
+        </div>
+        <div class="features__feature">
+          <h3>
+            Заводит новых друзей
+          </h3>
+          <p class="features__intro">
+            Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+          </p>
+        </div>
+        <div class="features__image">
+          <img src="http://placehold.it/280x280" width="280" height="280" alt="Всем привет!">
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="reviews__wrapper">
+          <div class="reviews__items">
+            <input class="slider-nav__switcher" type="radio" name="reviews" id="review-1" checked>
+            <input class="slider-nav__switcher" type="radio" name="reviews" id="review-2">
+            <input class="slider-nav__switcher" type="radio" name="reviews" id="review-3">
+
+            <div class="reviews__item  reviews__item--first">
+              <h3>
+                Николай Петров
+              </h3>
+              <p class="reviews__intro">
+                "Это приложение перевернуло мой мир и позволило по новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
+              </p>
+            </div>
+            <div class="reviews__item  reviews__item--second">
+              <h3>
+                Николай Петров
+              </h3>
+              <p class="reviews__intro">
+                "Это приложение перевернуло мой мир и позволило по новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
+              </p>
+            </div>
+            <div class="reviews__item  reviews__item--third">
+              <h3>
+                Николай Петров
+              </h3>
+              <p class="reviews__intro">
+                "Это приложение перевернуло мой мир и позволило по новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
+              </p>
+            </div>
+
+            <div class="slider-nav  reviews__nav">
+              <label class="slider-nav__btn" for="review-1"></label>
+              <label class="slider-nav__btn" for="review-2"></label>
+              <label class="slider-nav__btn" for="review-3"></label>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="rates">
+        <div class="rates__wrapper">
+          <div class="rates__lists">
+            <input class="slider-nav__switcher" type="radio" name="rates" id="rate-1" checked>
+            <input class="slider-nav__switcher" type="radio" name="rates" id="rate-2">
+            <input class="slider-nav__switcher" type="radio" name="rates" id="rate-3">
+            
+            <table class="rates__list rates__list--first">
+              <tr>
+                <td class="rates__header">
+                  <span class="rates-list__rate  rates-list__rate--name">База</span>
+                  <span class="rates-list__rate  rates-list__rate--price">1,99 USD</span>
+                </td>
+                <td>
+                  Розовый фильтр
+                </td>
+                <td>
+                  Смайлики
+                </td>
+                <td>
+                  Комментарии
+                </td>
+              </tr>
+            </table>
+
+            <table class="rates__list rates__list--second">
+              <tr>
+                <td class="rates-list__header">
+                  <span class="rates-list__rate  rates-list__rate--name">Стандарт</span>
+                  <span class="rates-list__rate  rates-list__rate--price">3,99 USD</span>
+                </td>
+                <td>
+                  Розовый фильтр
+                </td>
+                <td>
+                  Смайлики
+                </td>
+                <td>
+                  Комментарии
+                </td>
+              </tr>
+            </table>
+
+            <table class="rates__list rates__list--third">
+              <tr>
+                <td class="rates-list__header">
+                  <span class="rates-list__rate  rates-list__rate--name">Анлим</span>
+                  <span class="rates-list__rate  rates-list__rate--price">9,99 USD</span>
+                </td>
+                <td>
+                  Розовый фильтр
+                </td>
+                <td>
+                  Смайлики
+                </td>
+                <td>
+                  Комментарии
+                </td>
+              </tr>
+            </table>
+
+            <div class="slider-nav  reviews__nav">
+              <label class="slider-nav__btn" for="rate-1"></label>
+              <label class="slider-nav__btn" for="rate-2"></label>
+              <label class="slider-nav__btn" for="rate-3"></label>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="index-footer">
+      <section class="contacts">
+        <div class="contacts__text">
+          Остались вопросы?<br>
+          Свяжитесь с нами!
+        </div>
+
+        <h3>
+          Звоните:
+        </h3>
+        <div class="contacts__text contacts__text--red">
+          +7 (812) 555-66-66
+        </div>
+
+        <h3>
+          Пишите:
+        </h3>
+        <div class="contacts__text contacts__text--red">
+          mail@htmlacademy.ru
+        </div>
+
+        <h3>
+          Приезжайте в гости:
+        </h3>
+        <div class="contacts__text contacts__text--red">
+          ул.Большая Конюшенная, 19/8
+        </div>
+      </section>
+
+      <section class="index-footer__map">
+        <map></map>	
+      </section>
+    </footer>
 
   </body>
 </html>
