@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+
+  <body>
+
+    <header class="main-header">
+      <section class="logo-text">
+          <img src="http://placehold.it/80x50" width="80" height="50" alt="PINK лого">
+        </section>
+
+        <nav class="main-menu">
+          <div class="main-menu__toggle  main-menu__toggle--closed">
+            Открыть меню
+          </div>
+          <div class="main-menu__wrapper  main-menu__wrapper--closed">
+            <ul class="main-menu__list">
+              <a href="index.html">
+                  Главная
+                </a>
+              <li class="main-menu__item">
+                <a href="photo.html">
+                  Фотографии
+                </a>
+              </li>
+              <li class="main-menu__item">
+                Конкурс
+              </li>
+              <li class="main-menu__item">
+                <a href="#">
+                  HTML Academy
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <section class="main-promo">
+          <div class="main-promo__text">
+            Конкурс на самое безбашенное путешествие с Пинк!
+          </div>
+        </section>
+      </header>
+
+      <section class="form">
+
+        <div class="form__intro">
+          Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+        </div>
+
+        <form action="https://echo" method="post">
+          <fieldset class="form__set">
+            <label for="name">
+              <span class="form__label  form__label--red">
+                Имя
+              </span>
+            </label>
+            <input type="text" name="name" id="name" placeholder="Введите Ваше имя">
+
+            <label for="surname">
+              <span class="form__label  form__label--red">
+                Фамилия
+              </span>
+            </label>
+            <input type="text" name="surname" id="surname" placeholder="Укажите фамилию">
+
+            <label for="patronymic">
+              <span class="form__label  form__label--red">
+                Отчество
+              </span>
+            </label>
+            <input type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+          </fieldset>
+
+          <fieldset class="form__set  form__set--grey">
+            <span class="form__label  form__label--red">
+              Ваши безбашенные достижения в путешествии
+            </span>
+            <input type="checkbox" id="attainment-1" checked>
+            <label for="attainment-1">
+              Сделал селфи с акулой
+            </label>
+
+            <input type="checkbox" id="attainment-2" checked>
+            <label for="attainment-2">
+              Обгорел на пляже
+            </label>
+
+            <input type="checkbox" id="attainment-3">
+            <label for="attainment-3">
+              Видел Чака Норриса
+            </label>
+
+            <input type="checkbox" id="attainment-4">
+            <label for="attainment-4">
+              Накупил сувениров
+            </label>
+
+            <input type="checkbox" id="attainment-5" checked>
+            <label for="attainment-5">
+              Удержал башню
+            </label>
+
+            <input type="checkbox" id="attainment-6">
+            <label for="attainment-6">
+              Разгромил отель
+            </label>
+          </fieldset>
+
+          <fieldset class="form__set">
+            <label for="tel">
+              <span class="form__label form__label--red">
+                Номерок телефончика
+              </span>
+            </label>
+            <input type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста">
+            
+            <label for="email">
+              <span class="form__label form__label--red">
+                Адресок почты
+              </span>
+            </label>
+            <input type="email" name="email" id="email" placeholder="E-mail, пожалуйста">
+          </fieldset>
+
+          <fieldset class="form__set form__set--grey">
+            <span class="form__label">
+              С каким приложением путешествовали?
+            </span>
+            <input type="radio" name="app" id="app-1" checked>
+            <label for="app-1">
+              Pink для iOS
+            </label>
+
+            <input type="radio" name="app" id="app-2">
+            <label for="app-2">
+              Pink на Android
+            </label>
+
+            <input type="radio" name="app" id="app-3">
+            <label for="app-3">
+              Windows Phone
+            </label>
+          </fieldset>
+
+          <fieldset class="form__set">
+            <label for="emotions">
+              <span class="form__label  form__label--red">
+                Опишите свои эмоции
+              </span>
+            </label>
+            <textarea name="emotions" id="emotions" rows="6">
+              Можно прям в красках, не стесняясь в выражениях
+            </textarea>
+
+            <input type="submit" class="form__btn" value="Отправить форму">
+            <span class="form__label  form__label--grey"><sup>*</sup> - обязательные поля</span>
+          </fieldset>
+
+        </form>
+
+      </section>
+
+      <footer class="inner-footer">
+        <section class="logo logo--full">
+          <img src="http://placehold.it/150x50" width="150" height="50" alt="Pink логотип">
+        </section>
+
+        <section class="social">
+          <a href="#" class="social__icon  social__icon--twitter"></a>
+          <a href="#" class="social__icon  social__icon--facebook"></a>
+          <a href="#" class="social__icon  social__icon--youtube"></a>
+        </section>
+
+        <section class="inner-footer__copyright">
+          <span>Разработано</span>
+          <a href="#" class="inner-footer__copyright-logo">
+            <img src="http://placehold.it/20x20" width="20" height="20" alt="Academy логотип">
+          </a>
+        </section>
+      </footer>
+
+    </body>
+
+  </html>
+
+
