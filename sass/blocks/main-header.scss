@@ -1,0 +1,14 @@
+.main-header {
+	width: $width;
+	min-height: 237px;
+	margin: 0;
+	background-color: #1d2631;
+	background-image: url("../img/bg-back-mobile.jpg");
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	outline: 2px solid green;
+
+	&--inner {
+	  height: 237px;
+	}
+}

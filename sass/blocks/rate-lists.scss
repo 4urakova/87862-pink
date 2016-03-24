@@ -1,0 +1,9 @@
+.rate-lists {
+	padding-top: 65px;
+	min-height: 280px;
+	outline: 2px dashed blue;
+
+	&__list:not(:first-of-type) {
+	  display: none;
+	  }
+}

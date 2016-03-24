@@ -1,0 +1,11 @@
+.main-menu {
+	display: block;
+	width: $width;
+	min-height: 66px;
+	background-color: #1c2630;
+	outline: 4px solid blue;
+
+	&__list, &__toggle {
+	  display: none;
+	}
+}
