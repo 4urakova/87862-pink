@@ -1,0 +1,10 @@
+.reviews {
+	min-height: 354px;
+	background: white;
+	outline: 3px solid red;
+
+	&__item:not(:first-of-type) {
+	  display: none;
+	}
+
+}

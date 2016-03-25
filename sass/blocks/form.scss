@@ -1,0 +1,14 @@
+.form {
+	min-height: 2270px;
+	outline: 2px solid red;
+
+	&__intro {
+	  min-height: 92px;
+	  padding-top: 55px;
+	  margin: 0 auto;
+	  font-size: 14px;
+	  text-align: center;
+	  color: #283645;
+	  outline: 2px dashed red;
+	}
+}

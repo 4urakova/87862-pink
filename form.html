@@ -4,13 +4,15 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
   </head>
 
   <body>
 
-    <header class="main-header">
+    <header class="main-header  main-header--inner">
       <section class="logo-text">
-          <img src="http://placehold.it/80x50" width="80" height="50" alt="PINK лого">
+          <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK лого">
         </section>
 
         <nav class="main-menu">
@@ -19,9 +21,9 @@
           </div>
           <div class="main-menu__wrapper  main-menu__wrapper--closed">
             <ul class="main-menu__list">
-              <a href="index.html">
+              <li class="main-menu__item">
                   Главная
-                </a>
+              </li>
               <li class="main-menu__item">
                 <a href="photo.html">
                   Фотографии
@@ -39,7 +41,7 @@
           </div>
         </nav>
 
-        <section class="main-promo">
+        <section class="main-promo  main-promo--inner">
           <div class="main-promo__text">
             Конкурс на самое безбашенное путешествие с Пинк!
           </div>
@@ -77,9 +79,9 @@
           </fieldset>
 
           <fieldset class="form__set  form__set--grey">
-            <span class="form__label  form__label--red">
+            <div class="form__title  form__title--red">
               Ваши безбашенные достижения в путешествии
-            </span>
+            </div>
             <input type="checkbox" id="attainment-1" checked>
             <label for="attainment-1">
               Сделал селфи с акулой
@@ -128,9 +130,9 @@
           </fieldset>
 
           <fieldset class="form__set form__set--grey">
-            <span class="form__label">
+            <div class="form__title  form__title--red">
               С каким приложением путешествовали?
-            </span>
+            </div>
             <input type="radio" name="app" id="app-1" checked>
             <label for="app-1">
               Pink для iOS
@@ -149,7 +151,7 @@
 
           <fieldset class="form__set">
             <label for="emotions">
-              <span class="form__label  form__label--red">
+              <span class="form__title  form__title--red">
                 Опишите свои эмоции
               </span>
             </label>
@@ -158,7 +160,7 @@
             </textarea>
 
             <input type="submit" class="form__btn" value="Отправить форму">
-            <span class="form__label  form__label--grey"><sup>*</sup> - обязательные поля</span>
+            <span class="form__title  form__title--grey"><sup>*</sup> - обязательные поля</span>
           </fieldset>
 
         </form>
@@ -167,7 +169,7 @@
 
       <footer class="inner-footer">
         <section class="logo logo--full">
-          <img src="http://placehold.it/150x50" width="150" height="50" alt="Pink логотип">
+          <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Pink логотип">
         </section>
 
         <section class="social">
@@ -179,7 +181,7 @@
         <section class="inner-footer__copyright">
           <span>Разработано</span>
           <a href="#" class="inner-footer__copyright-logo">
-            <img src="http://placehold.it/20x20" width="20" height="20" alt="Academy логотип">
+            <img src=="img/htmlacademy.svg" width="27" height="34" alt="Academy логотип">
           </a>
         </section>
       </footer>

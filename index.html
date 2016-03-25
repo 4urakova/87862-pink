@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
 
   <body>
@@ -12,7 +13,7 @@
  <!-- <div class="container"> Не знаю, зачем, пусть пока будет-->
 
         <section class="logo-text">
-          <img src="http://placehold.it/80x50" width="80" height="50" alt="PINK лого">
+          <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK лого">
         </section>
 
         <nav class="main-menu">
@@ -25,7 +26,7 @@
                 Информация
               </li>
               <li class="main-menu__item">
-                <a href="#">
+                <a href="form.html">
                   Возможности
                 </a>
               </li>
@@ -48,25 +49,25 @@
             Взгляни на жизнь иначе!
           </div>
           <div class="main-promo__image">
-            <img src="http://placehold.it/280x280" width="280" height="280" alt="PINK промо">
+            <img src="img/iphone-hand-mobile.png" width="258" height="286" alt="PINK промо">
           </div>
           <a href="#" class="main-promo__button">
             Скачать приложение
           </a>
-          <div class="main-promo__systems">
-            <a href="#" class="main-promo__system">
-              <img src="http://placehold.it/60x60" width="60" height="60" alt="Apple">
+          <div class="systems">
+            <a href="#" class="systems__system-1">
+              <img src="img/logo-apple.svg" width="47" height="56" alt="Apple">
             </a>
-            <a href="#" class="main-promo__system">
-              <img src="http://placehold.it/60x60" width="60" height="60" alt="Android">
+            <a href="#" class="systems__system-2">
+              <img src="img/logo-android.svg" width="43" height="47" alt="Android">
             </a>
-            <a href="#" class="main-promo__system">
-              <img src="http://placehold.it/60x60" width="60" height="60" alt="Windows">
+            <a href="#" class="systems__system-3">
+              <img src="img/logo-microsoft.svg" width="44" height="41" alt="Windows">
             </a>
           </div>
-          <p class="main-promo__text  main-promo__text--note">
+          <div class="main-promo__text  main-promo__text--note">
             Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-          </p>
+          </div>
         </section>
 
  <!-- </div> -->
@@ -75,12 +76,12 @@
     <main class="main-info">
 
       <header class="main-info__header">
-        <p class="main-info__slogan">
+        <div class="main-info__slogan">
           Устали от серости мегаполиса?
-        </p>
-        <p class="main-info__slogan">
+        </div>
+        <div class="main-info__slogan">
           Нам есть, что Вам предложить!
-        </p>
+        </div>
       </header>
 
       <section class="features">
@@ -109,7 +110,7 @@
           </p>
         </div>
         <div class="features__image">
-          <img src="http://placehold.it/280x280" width="280" height="280" alt="Всем привет!">
+          <img src="img/iphone-screen-mobile.png" width="157" height="320" alt="Всем привет!">
         </div>
       </section>
 
@@ -120,29 +121,29 @@
             <input class="slider-nav__switcher" type="radio" name="reviews" id="review-2">
             <input class="slider-nav__switcher" type="radio" name="reviews" id="review-3">
 
-            <div class="reviews__item  reviews__item--first">
+            <div class="reviews__item  reviews__item--1">
               <h3>
                 Николай Петров
               </h3>
-              <p class="reviews__intro">
+              <div class="reviews__intro">
                 "Это приложение перевернуло мой мир и позволило по новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
-              </p>
+              </div>
             </div>
-            <div class="reviews__item  reviews__item--second">
+            <div class="reviews__item  reviews__item--2">
               <h3>
                 Николай Петров
               </h3>
-              <p class="reviews__intro">
+              <div class="reviews__intro">
                 "Это приложение перевернуло мой мир и позволило по новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
-              </p>
+              </div>
             </div>
-            <div class="reviews__item  reviews__item--third">
+            <div class="reviews__item  reviews__item--3">
               <h3>
                 Николай Петров
               </h3>
-              <p class="reviews__intro">
+              <div class="reviews__intro">
                 "Это приложение перевернуло мой мир и позволило по новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
-              </p>
+              </div>
             </div>
 
             <div class="slider-nav  reviews__nav">
@@ -158,64 +159,64 @@
 
       <section class="rates">
         <div class="rates__wrapper">
-          <div class="rates__lists">
+          <div class="rate-lists">
             <input class="slider-nav__switcher" type="radio" name="rates" id="rate-1" checked>
             <input class="slider-nav__switcher" type="radio" name="rates" id="rate-2">
             <input class="slider-nav__switcher" type="radio" name="rates" id="rate-3">
             
-            <table class="rates__list rates__list--first">
-              <tr>
-                <td class="rates__header">
-                  <span class="rates-list__rate  rates-list__rate--name">База</span>
-                  <span class="rates-list__rate  rates-list__rate--price">1,99 USD</span>
-                </td>
-                <td>
+            <div class="rate-lists__list rate-lists__list--1">
+              
+                <div class="rate-lists__header">
+                  <span class="rate-lists__rate  rate-lists__rate--name">База</span>
+                  <span class="rate-lists__rate  rate-lists__rate--price">1,99 USD</span>
+                </div>
+                <div class="rate-lists__cell">
                   Розовый фильтр
-                </td>
-                <td>
+                </div>
+                <div class="rate-lists__cell">
                   Смайлики
-                </td>
-                <td>
+                </div>
+                <div class="rate-lists__cell">
                   Комментарии
-                </td>
-              </tr>
-            </table>
+                </div>
 
-            <table class="rates__list rates__list--second">
-              <tr>
-                <td class="rates-list__header">
-                  <span class="rates-list__rate  rates-list__rate--name">Стандарт</span>
-                  <span class="rates-list__rate  rates-list__rate--price">3,99 USD</span>
-                </td>
-                <td>
-                  Розовый фильтр
-                </td>
-                <td>
-                  Смайлики
-                </td>
-                <td>
-                  Комментарии
-                </td>
-              </tr>
-            </table>
+            </div>
 
-            <table class="rates__list rates__list--third">
-              <tr>
-                <td class="rates-list__header">
-                  <span class="rates-list__rate  rates-list__rate--name">Анлим</span>
-                  <span class="rates-list__rate  rates-list__rate--price">9,99 USD</span>
-                </td>
-                <td>
+            <div class="rate-lists__list rate-lists__list--2">
+              
+                <div class="rate-lists__header">
+                  <span class="rate-lists__rate  rate-lists__rate--name">Стандарт</span>
+                  <span class="rate-lists__rate  rate-lists__rate--price">3,99 USD</span>
+                </div>
+                <div class="rate-lists__cell">
                   Розовый фильтр
-                </td>
-                <td>
+                </div>
+                <div class="rate-lists__cell">
                   Смайлики
-                </td>
-                <td>
+                </div>
+                <div class="rate-lists__cell">
                   Комментарии
-                </td>
-              </tr>
-            </table>
+                </div>
+
+            </div>
+
+            <div class="rate-lists__list rate-lists__list--3">
+              
+                <div class="rate-lists__header">
+                  <span class="rate-lists__rate  rate-lists__rate--name">Анлим</span>
+                  <span class="rate-lists__rate  rate-lists__rate--price">9,99 USD</span>
+                </div>
+                <div class="rate-lists__cell">
+                  Розовый фильтр
+                </div>
+                <div class="rate-lists__cell">
+                  Смайлики
+                </div>
+                <div class="rate-lists__cell">
+                  Комментарии
+                </div>
+
+            </div>
 
             <div class="slider-nav  reviews__nav">
               <label class="slider-nav__btn" for="rate-1"></label>

@@ -1,0 +1,12 @@
+.main-promo {
+	width: $width;
+	min-height: 665px;
+	padding: 0;
+	outline: 2px solid red;
+
+	&--inner {
+	  height: 173px;
+	  outline: none;
+	}
+
+}
