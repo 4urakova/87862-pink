@@ -1,4 +1,20 @@
 .index-footer {
-	min-height: 613px;
-	outline: 3px solid green;
+  @include container;
+  min-height: 613px;
+
+  &__map {
+    width: 100%;
+    height: 125px;
+    background-image: url("../img/bg-map.png");
+    background-size: cover;
+  }
+}
+
+@media ($mobile-width) {
+  .index-footer {
+
+    &--invisible {
+      display: none;
+    }
+  }
 }

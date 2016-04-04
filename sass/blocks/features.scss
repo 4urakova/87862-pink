@@ -1,10 +1,136 @@
 .features {
-	min-height: 755px;
-	padding-top: 90px;
-	outline: 3px solid red;
+  width: 100%;
+  min-height: 430px;
+  position: relative;
 
-	&__feature {
-	  width: 280px;
-	  margin: 0 auto;
-	}
+  &__feature {
+    @include container;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__feature h3 {
+    font-size: 18px;
+    line-height: 10px;
+  }
+
+  &__intro {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__feature--extra {
+    display: none;
+  }
+}
+
+@media ($mobile-width) {
+  .features {
+    &__image:nth-of-type(1),
+    &__image:nth-of-type(2) {
+      display: none;
+    }
+
+    &__image {
+      margin-left: 25%;
+    }
+  }
+}
+
+@media ($tablet-width) {
+.features {
+  @include container;
+  @include clearfix;
+
+
+  &__wrapper {
+    display: block;
+    float: right;
+    width: 310px;
+    min-height: 115px;
+  }
+
+  &__feature {
+    width: 310px;
+    min-height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__feature--extra {
+    display: none;
+  }
+
+  &__feature h3 {
+    font-size: 18px;
+    line-height: 10px;
+  }
+
+  &__image:nth-of-type(1),
+  &__image:nth-of-type(2) {
+    display: none;
+}
+
+  &__image:nth-of-type(3) img {
+    width: 270px;
+    height: 550px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+  }
+}
+}
+
+@media ($desktop-width) {
+  .features {
+    min-height: 600px;
+
+    &__wrapper {
+      @include container;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__wrapper:nth-of-type(3) {
+      justify-content: space-around;
+      order: -1;
+    }
+
+    &__feature {
+      width: 250px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__feature--extra {
+      @include container;
+      display: flex;
+    }
+
+    &__feature--extra-wrapper {
+      margin-left: 70px;
+      width: 500px;
+      text-align: left;
+    }
+
+    &__feature--extra a {
+      display: block;
+      color: #d22856;
+    }
+
+    &__feature h3 {
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    &__image:nth-of-type(1),
+    &__image:nth-of-type(2),
+    &__image:nth-of-type(3) {
+      display: block;
+    }
+  }
 }

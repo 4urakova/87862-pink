@@ -1,0 +1,35 @@
+@mixin clearfix() {
+  &::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container() {
+  @media ("max-width: 767px") {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  @media ("min-width: 768px") {
+    width: 620px;
+  }
+
+  @media ("min-width: 1200px") {
+    width: 940px;
+    position: relative;
+  }
+}
+
+@mixin container-fluid() {
+
+  @media ($mobile-width) {
+    width: auto;
+  }
+
+  @media ($tablet-width) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

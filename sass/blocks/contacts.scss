@@ -1,4 +1,55 @@
 .contacts {
-	min-height: 415px;
-	color: #283645;
+  position: relative;
+  min-height: 400px;
+  color: #283645;
+
+  &__text {
+    margin-top: 45px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__text--red {
+    color: #d22856;
+    margin-top: 0;
+  }
+
+  &__text--red:last-child {
+    margin-bottom: 0;
+  }
+
+  & h3 {
+    margin-bottom: 0;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -34px;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 34px;
+    background-image:
+      linear-gradient(
+      to top right,
+      transparent 50%,
+      $bg-white 50%
+      ),
+      linear-gradient(
+      to top left,
+      transparent 50%,
+      $bg-white 50%
+      );
+    background-size: 50.1% 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% 0;
+  }
 }

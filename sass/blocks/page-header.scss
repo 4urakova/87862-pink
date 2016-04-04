@@ -1,0 +1,33 @@
+.page-header {
+  width: 100%;
+  height: 66px;
+  background-color: fade-out($bg-darkblue, 0.3);
+
+  &--menu-opened {
+    background-color: $bg-darkblue;
+  }
+
+  &__wrapper {
+    @include container;
+  }
+}
+
+@media ($tablet-width) {
+  .page-header {
+    height: 110px;
+
+    &__wrapper {
+      @include container;
+    }
+  }
+}
+
+@media ($desktop-width) {
+   .page-header {
+     height: 110px;
+  }
+
+  &--menu-opened {
+    background-color: none;
+  }
+}

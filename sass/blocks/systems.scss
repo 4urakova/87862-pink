@@ -1,6 +1,17 @@
 .systems {
-	width: 280px;
-	min-height: 57px;
-	margin: 0 auto;
-	outline: 2px solid white;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 210px;
+  height: 60px;
+  margin-top: 30px;
+}
+
+@media ($tablet-width) {
+  .systems {
+    position: absolute;
+    top: 370px;
+    left: 45px;
+    z-index: 200px;
+  }
 }

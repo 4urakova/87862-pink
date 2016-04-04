@@ -1,7 +1,73 @@
 .main-info {
-	width: $width;
-	min-height: 218px;
-	background-color: #f2f2f2;
-	color: #283645;
-	outline: 3px solid yellow;
+    width: 320px;
+    min-height: 250px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    color: #283645;
+
+    &__header {
+      min-height: 250px;
+      position: relative;
+      background-color: $bg-white;
+    }
+
+    &__slogan {
+      @include container;
+      margin-top: 45px;
+      font-family: "Open Sans Light", Arial, sans-serif;
+      font-size: 24px;
+      line-height: 1.25;
+      color: #283645;
+      text-align: center;
+    }
 }
+
+@media ($tablet-width) {
+
+    .main-info {
+      width: 100%;
+
+      &__header {
+        min-height: 295px;
+      }
+
+      &__slogan {
+        @include container;
+        margin-top: 58px;
+        font-size: 40px;
+        line-height: 1.25;
+      }
+
+      &__slogan:nth-child(2) {
+        width: 350px;
+        margin: 0 auto;
+      }
+  }
+}
+
+@media ($desktop-width) {
+
+    .main-info {
+      width: 100%;
+
+
+      &__header {
+        min-height: 420px;
+      }
+
+      &__slogan {
+        width: 820px;
+        margin-top: 73px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 50px;
+        line-height: 1.25;
+      }
+
+      &__slogan:nth-child(2) {
+        width: 450px;
+        margin: 0 auto;
+      }
+   }
+}
+

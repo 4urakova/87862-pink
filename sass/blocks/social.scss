@@ -1,6 +1,27 @@
 .social {
-	width: 180px;
-	height: 50px;
-	margin: 0 auto;
-	outline: 2px dashed green;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 180px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 35px;
+  
+  &__icon {
+    display: block;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid #e9ebec;
+  }
+}
+
+@media ($tablet-width) {
+  &__icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 2px solid #e9ebec;
+  }
 }

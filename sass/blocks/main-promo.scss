@@ -1,12 +1,103 @@
 .main-promo {
-	width: $width;
-	min-height: 665px;
-	padding: 0;
-	outline: 2px solid red;
+  display: block;
+  width: 100%;
+  min-height: 665px;
+  @include container;
+  @include clearfix;
 
-	&--inner {
-	  height: 173px;
-	  outline: none;
-	}
+  &--inner {
+    height: 173px;
+  }
 
+  &__text {
+    width: 235px;
+    margin-top: 30px;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__text--inner {
+    width: auto;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-align: center;
+
+  }
+
+  &__bg {
+    width: 100%;
+    background-color: $bg-darkblue;
+  }
+
+  &__button {
+    border: 3px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 15px 45px;
+    color: white;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &__text--note {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media ($tablet-width) {
+
+  .main-promo {
+    display: block;
+    @include container;
+
+
+  &__image {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__image img {
+    width: 470px;
+    height: 545px;
+  }
+
+  &__text {
+    width: 200px;
+    z-index: 200;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  &__text--note {
+    background: none;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__button {
+    position: absolute;
+    top: 268px;
+    left: 0;
+    z-index: 200;
+  }
+}
+}
+
+@media ($desktop-width) {
+
+.main-promo {
+display: block;
+position: relative;
+min-height: 745px;
+@include container;
+
+}
 }
