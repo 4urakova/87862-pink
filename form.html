@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
   </head>
   </head>
 
@@ -30,7 +31,9 @@
                 </a>
               </li>
               <li class="main-menu__item">
-                Конкурс
+                <a href="#">
+                  Конкурс
+                </a>
               </li>
               <li class="main-menu__item">
                 <a href="#">
@@ -42,7 +45,7 @@
         </nav>
 
         <section class="main-promo  main-promo--inner">
-          <div class="main-promo__text">
+          <div class="main-promo__text  main-promo__text--inner">
             Конкурс на самое безбашенное путешествие с Пинк!
           </div>
         </section>
@@ -52,120 +55,161 @@
 
         <div class="form__intro">
           Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+          <span>Пожалуйста, заполните форму ниже:</span>
         </div>
 
         <form action="https://echo" method="post">
           <fieldset class="form__set">
-            <label for="name">
-              <span class="form__label  form__label--red">
-                Имя
-              </span>
-            </label>
-            <input type="text" name="name" id="name" placeholder="Введите Ваше имя">
+            <div class="form__set-wrapper">
+              <label for="name">
+                <span class="form__label  form__label--red">
+                  Имя
+                </span>
+              </label>
+              <input type="text" name="name" id="name" placeholder="Введите Ваше имя">
 
-            <label for="surname">
-              <span class="form__label  form__label--red">
-                Фамилия
-              </span>
-            </label>
-            <input type="text" name="surname" id="surname" placeholder="Укажите фамилию">
+              <label for="surname">
+                <span class="form__label  form__label--red">
+                  Фамилия
+                </span>
+              </label>
+              <input type="text" name="surname" id="surname" placeholder="Укажите фамилию">
 
-            <label for="patronymic">
-              <span class="form__label  form__label--red">
-                Отчество
-              </span>
-            </label>
-            <input type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+              <label for="patronymic">
+                <span class="form__label  form__label--red">
+                  Отчество
+                </span>
+              </label>
+              <input type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+            </div>
           </fieldset>
 
           <fieldset class="form__set  form__set--grey">
-            <div class="form__title  form__title--red">
-              Ваши безбашенные достижения в путешествии
+            <div class="form__set-wrapper">
+              <legend class="form__title  form__title--red">
+                Ваши безбашенные достижения в путешествии
+              </legend>
+              <input type="checkbox" id="attainment-1" checked>
+              <label for="attainment-1">
+                Сделал селфи с акулой
+              </label>
+
+              <input type="checkbox" id="attainment-2" checked>
+              <label for="attainment-2">
+                Обгорел на пляже
+              </label>
+
+              <input type="checkbox" id="attainment-3">
+              <label for="attainment-3">
+                Видел Чака Норриса
+              </label>
+
+              <input type="checkbox" id="attainment-4">
+              <label for="attainment-4">
+                Накупил сувениров
+              </label>
+
+              <input type="checkbox" id="attainment-5" checked>
+              <label for="attainment-5">
+                Удержал башню
+              </label>
+
+              <input type="checkbox" id="attainment-6">
+              <label for="attainment-6">
+                Разгромил отель
+              </label>
             </div>
-            <input type="checkbox" id="attainment-1" checked>
-            <label for="attainment-1">
-              Сделал селфи с акулой
-            </label>
-
-            <input type="checkbox" id="attainment-2" checked>
-            <label for="attainment-2">
-              Обгорел на пляже
-            </label>
-
-            <input type="checkbox" id="attainment-3">
-            <label for="attainment-3">
-              Видел Чака Норриса
-            </label>
-
-            <input type="checkbox" id="attainment-4">
-            <label for="attainment-4">
-              Накупил сувениров
-            </label>
-
-            <input type="checkbox" id="attainment-5" checked>
-            <label for="attainment-5">
-              Удержал башню
-            </label>
-
-            <input type="checkbox" id="attainment-6">
-            <label for="attainment-6">
-              Разгромил отель
-            </label>
           </fieldset>
 
           <fieldset class="form__set">
-            <label for="tel">
-              <span class="form__label form__label--red">
-                Номерок телефончика
-              </span>
-            </label>
-            <input type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста">
-            
-            <label for="email">
-              <span class="form__label form__label--red">
-                Адресок почты
-              </span>
-            </label>
-            <input type="email" name="email" id="email" placeholder="E-mail, пожалуйста">
+            <div class="form__set-wrapper">
+              <label for="tel">
+                <span class="form__label form__label--red">
+                  Номерок телефончика
+                </span>
+              </label>
+              <input type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста">
+              
+              <label for="email">
+                <span class="form__label form__label--red">
+                  Адресок почты
+                </span>
+              </label>
+              <input type="email" name="email" id="email" placeholder="E-mail, пожалуйста">
+            </div>
           </fieldset>
 
           <fieldset class="form__set form__set--grey">
-            <div class="form__title  form__title--red">
-              С каким приложением путешествовали?
+            <div class="form__set-wrapper">
+              <legend class="form__title  form__title--red">
+                С каким приложением путешествовали?
+              </legend>
+              <input type="radio" name="app" id="app-1" checked>
+              <label for="app-1">
+                Pink для iOS
+              </label>
+
+              <input type="radio" name="app" id="app-2">
+              <label for="app-2">
+                Pink на Android
+              </label>
+
+              <input type="radio" name="app" id="app-3">
+              <label for="app-3">
+                Windows Phone
+              </label>
             </div>
-            <input type="radio" name="app" id="app-1" checked>
-            <label for="app-1">
-              Pink для iOS
-            </label>
-
-            <input type="radio" name="app" id="app-2">
-            <label for="app-2">
-              Pink на Android
-            </label>
-
-            <input type="radio" name="app" id="app-3">
-            <label for="app-3">
-              Windows Phone
-            </label>
           </fieldset>
 
           <fieldset class="form__set">
-            <label for="emotions">
-              <span class="form__title  form__title--red">
+            <div class="form__set-wrapper">
+              <legend class="form__title  form__title--red">
                 Опишите свои эмоции
-              </span>
-            </label>
-            <textarea name="emotions" id="emotions" rows="6">
-              Можно прям в красках, не стесняясь в выражениях
-            </textarea>
+              </legend>
+              <textarea name="emotions" id="emotions" rows="6">Можно прям в красках, не стесняясь в выраженияx</textarea>
 
-            <input type="submit" class="form__btn" value="Отправить форму">
-            <span class="form__title  form__title--grey"><sup>*</sup> - обязательные поля</span>
+              <input type="submit" class="form__btn" value="Отправить форму">
+              <div class="form__title  form__title--grey"><sup>*</sup> - обязательные поля</div>
+            </div>
           </fieldset>
 
         </form>
 
       </section>
+
+      <footer class="index-footer  index-footer--invisible">
+        <section class="contacts">
+          <div class="contacts__text">
+            Остались вопросы?<br>
+            Свяжитесь с нами!
+          </div>
+
+          <h3>
+            Звоните:
+          </h3>
+          <div class="contacts__text contacts__text--red">
+            +7 (812) 555-66-66
+          </div>
+
+          <h3>
+            Пишите:
+          </h3>
+          <div class="contacts__text contacts__text--red">
+            mail@htmlacademy.ru
+          </div>
+
+          <h3>
+            Приезжайте в гости:
+          </h3>
+          <div class="contacts__text contacts__text--red">
+            ул.Большая Конюшенная, 19/8
+          </div>
+        </section>
+
+        <section class="index-footer__map">
+          <map></map> 
+        </section>
+      </footer>
 
       <footer class="inner-footer">
         <section class="logo logo--full">
