@@ -11,7 +11,7 @@
   <body>
 
     <header class="main-header">
-
+<!--
           <section class="logo-text">
             <div class="logo-text__wrapper">
               <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK лого">
@@ -19,11 +19,11 @@
           </section>
 
           <nav class="main-menu">
-            <div class="main-menu__toggle  main-menu__toggle--opened">
+            <div class="main-menu__toggle  main-menu__toggle--closed">
               Открыть меню
             </div>
 
-            <div class="main-menu  main-menu--opened">
+            <div class="main-menu  main-menu--closed">
               <ul class="main-menu__list">
                 <li class="main-menu__item  main-menu__item--active">
                   <a href="#">
@@ -47,20 +47,61 @@
                 </li>
               </ul>
             </div>
+          </nav> -->
+
+        <section class="page-header  page-header--menu-opened">
+          <section class="logo-text">
+              <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK лого">
+          </section>
+
+          <nav class="main-menu">
+            <div class="main-menu__layout">
+              <div class="main-menu__toggle  main-menu__toggle--closed">
+                Открыть меню
+              </div>
+            </div>
+
+            <div class="main-menu__wrapper  main-menu__wrapper--closed">
+              <ul class="main-menu__list">
+                <li class="main-menu__item  main-menu__item--active">
+                  <a href="index.html">
+                    Главная
+                  </a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="photo.html">
+                    Фотографии
+                  </a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="form.html">
+                    Конкурс
+                  </a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="https://htmlacademy.ru">
+                    HTML academy
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
           </nav>
+        </section>
 
 
         <section class="main-promo">
-          <div class="main-promo__text">
-            Взгляните на жизнь иначе!
-          </div>
           <div class="main-promo__image">
-            <img src="img/iphone-hand-mobile.png" width="258" height="286" alt="PINK промо">
+            <div class="main-promo__text">
+            Взгляните на жизнь иначе!
+            </div>
+            <img src="img/iphone-hand-mobile.png" width="258" height="285" alt="PINK промо">
           </div>
-          <div class="main-promo__bg">
-            <a href="#" class="main-promo__button">
-              Скачать приложение
-            </a>
+        </section>
+
+        <section class="downloads">
+          <div class="downloads__wrapper">
+            <a href="https://itunes.com" class="downloads__button">Скачать приложение</a>
             <div class="systems">
               <a href="https://appstore.com" class="systems__system-1">
                 <img src="img/logo-apple.svg" width="47" height="60" alt="Apple">
@@ -72,12 +113,12 @@
                 <img src="img/logo-microsoft.svg" width="44" height="60" alt="Windows">
               </a>
             </div>
-            <div class="main-promo__text  main-promo__text--note">
+            <div class="downloads__text">
               Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
             </div>
           </div>
-
         </section>
+
 
     </header>
 
@@ -91,6 +132,8 @@
           Нам есть, что Вам предложить!
         </div>
       </header>
+
+      <div class="decoration"></div>
 
       <section class="features">
 
@@ -123,19 +166,6 @@
           </div>
         </div>
 
-        <div class="features__feature  features__feature--extra">
-          <img src="img/24.png" width="310" height="345" alt="24 часа">
-          <div class="features__feature  features__feature--extra-wrapper">
-            <h3>
-              Эффект на 24 часа!
-            </h3>
-            <p class="features__intro">
-              Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
-            </p>
-            <a href="#">Узнать больше об исследовании</a>
-          </div>
-        </div>
-
         <div class="features__wrapper">
         
           <img class="features__image" src="img/iphone-screen-mobile-1.png" width="157" height="320" alt="Всем привет!">
@@ -144,6 +174,23 @@
         
         </div>
 
+      </section>
+
+      <section class="advantage">
+        <div class="advantage__wrapper">
+          <div class="advantage__image">
+            <img src="img/24.png" width="240" height="275" alt="24 часа">
+          </div>
+          <div class="advantage__intro">
+            <h3>
+              Эффект на 24 часа!
+            </h3>
+            <p>
+              Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+            </p>
+            <a href="#">Узнать больше об исследовании</a>
+          </div>
+        </div>
       </section>
 
       <section class="reviews">
@@ -184,20 +231,23 @@
               </div>
             </div>
 
+          </div>
+
+          <div class="slider-nav  reviews__nav">
+
             <input class="slider-nav__switcher" type="radio" name="reviews" id="review-1" checked>
             <input class="slider-nav__switcher" type="radio" name="reviews" id="review-2">
             <input class="slider-nav__switcher" type="radio" name="reviews" id="review-3">
 
-            <div class="slider-nav  reviews__nav">
               <label class="slider-nav__btn" for="review-1"></label>
               <label class="slider-nav__btn" for="review-2"></label>
               <label class="slider-nav__btn" for="review-3"></label>
             </div>
-
-          </div>
         </div>
 
       </section>
+
+      <div class="decoration"></div>
 
       <section class="rates">
         <div class="rates__wrapper">
@@ -280,26 +330,33 @@
           Остались вопросы?<br>
           Свяжитесь с нами!
         </div>
+        <div class="contacts__wrapper">
+          <div class="contacts__block">
+            <h3>
+              Звоните:
+            </h3>
+            <div class="contacts__text contacts__text--red">
+              +7 (812) 555-66-66
+            </div>
+          </div>
 
-        <h3>
-          Звоните:
-        </h3>
-        <div class="contacts__text contacts__text--red">
-          +7 (812) 555-66-66
-        </div>
+          <div class="contacts__block">
+            <h3>
+              Пишите:
+            </h3>
+            <div class="contacts__text contacts__text--red">
+              mail@htmlacademy.ru
+            </div>
+          </div>
 
-        <h3>
-          Пишите:
-        </h3>
-        <div class="contacts__text contacts__text--red">
-          mail@htmlacademy.ru
-        </div>
-
-        <h3>
-          Приезжайте в гости:
-        </h3>
-        <div class="contacts__text contacts__text--red">
-          ул.Большая Конюшенная, 19/8
+          <div class="contacts__block">
+            <h3>
+              Приезжайте в гости:
+            </h3>
+            <div class="contacts__text contacts__text--red">
+              ул.Большая Конюшенная, 19/8
+            </div>
+          </div>
         </div>
       </section>
 
@@ -309,22 +366,24 @@
     </footer>
 
     <footer class="inner-footer  inner-footer--invisible">
-      <section class="logo logo--full">
-        <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Pink логотип">
-      </section>
+      <div class="inner-footer__wrapper">
+        <section class="logo logo--full">
+          <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Pink логотип">
+        </section>
 
-      <section class="social">
-        <a href="https//twitter.com" class="social__icon  social__icon--twitter"></a>
-        <a href="https//facebook.com" class="social__icon  social__icon--facebook"></a>
-        <a href="https//youtube.com" class="social__icon  social__icon--youtube"></a>
-      </section>
+        <section class="social">
+          <a href="https//twitter.com" class="social__icon  social__icon--twitter"></a>
+          <a href="https//facebook.com" class="social__icon  social__icon--facebook"></a>
+          <a href="https//youtube.com" class="social__icon  social__icon--youtube"></a>
+        </section>
 
-      <section class="inner-footer__copyright">
-        <span>Разработано</span>
-        <a href="#" class="inner-footer__copyright-logo">
-          <img src="img/htmlacademy.svg" width="27" height="34" alt="Academy логотип">
-        </a>
-      </section>
+        <section class="inner-footer__copyright">
+          <span>Разработано</span>
+          <a href="#" class="inner-footer__copyright-logo">
+            <img src="img/htmlacademy.svg" width="27" height="34" alt="Academy логотип">
+          </a>
+        </section>
+      </div>
     </footer>
 
   </body>

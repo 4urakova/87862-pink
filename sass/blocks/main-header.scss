@@ -17,11 +17,11 @@
 
   .main-header {
     width: 100%;
-    min-height: 730px;
-    }
+    max-height: 730px;
 
-  &--inner {
-    height: 440px;
+    &--inner {
+      min-height: 440px;
+    }
   }
 }
 

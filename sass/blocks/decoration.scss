@@ -1,0 +1,24 @@
+.decoration {
+  width: 0;
+  height: 0;
+  border-top: 35px solid white;
+  border-right: 320px solid transparent;
+}
+
+@media ($tablet-width) {
+  .decoration {
+    width: 0;
+    height: 0;
+    border-top: 55px solid white;
+    border-right: 700px solid transparent;
+  }
+}
+
+@media ($desktop-width) {
+  .decoration {
+    width: 0;
+    height: 0;
+    border-top: 90px solid white;
+    border-right: 1200px solid transparent;
+  }
+}

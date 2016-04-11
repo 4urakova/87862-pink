@@ -1,11 +1,12 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-family: "Open Sans Light", Arial, sans-serif;
-	font-size: 24px;
-	font-style: normal;
-	font-weight: normal;
-	color: white;
+  width: auto;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  сolor: white;
 }
 
 @font-face {
@@ -34,6 +35,10 @@ body {
 
 @import "variables.scss";
 @import "mixins.scss";
+@import "blocks/page-header.scss";
+@import "blocks/decoration.scss";
+@import "blocks/advantage.scss";
+@import "blocks/downloads.scss";
 @import "blocks/main-header.scss";
 @import "blocks/logo-text.scss";
 @import "blocks/main-menu.scss";

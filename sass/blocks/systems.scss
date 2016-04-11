@@ -1,17 +1,31 @@
 .systems {
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch;
-  width: 210px;
+  display: block;
+  width: 230px;
   height: 60px;
+  margin: 0 auto;
   margin-top: 30px;
+  font-size: 0;
+
+  & a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 
 @media ($tablet-width) {
   .systems {
-    position: absolute;
-    top: 370px;
-    left: 45px;
-    z-index: 200px;
+    float: left;
+    margin-top: 40px;
+    padding-left: 45px;
+  }
+}
+
+@media ($desktop-width) {
+  .systems {
+    float: left;
+    margin-top: 65px;
+    padding-left: 45px;
   }
 }

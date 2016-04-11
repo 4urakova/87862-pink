@@ -1,9 +1,22 @@
 .main-promo {
   display: block;
-  width: 100%;
-  min-height: 665px;
+  position: relative;
   @include container;
   @include clearfix;
+
+  &__text {
+    line-height: 1.25;
+    font-weight: 400;
+    text-align: center;
+    color: #ffffff;
+  }
+
+}
+
+@media ($mobile-width) {
+.main-promo {
+  width: 320px;
+  height: 390px;
 
   &--inner {
     height: 173px;
@@ -11,93 +24,123 @@
 
   &__text {
     width: 235px;
-    margin-top: 30px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 30px;
     font-size: 24px;
-    line-height: 1.25;
-    font-weight: 400;
-    text-align: center;
   }
 
   &__text--inner {
-    width: auto;
-    margin-top: 35px;
-    margin-bottom: 50px;
-    font-size: 24px;
-    line-height: 1.25;
-    font-weight: 400;
-    text-align: center;
-
+    padding-top: 35px;
+    padding-bottom: 50px;
   }
 
-  &__bg {
-    width: 100%;
-    background-color: $bg-darkblue;
-  }
-
-  &__button {
-    border: 3px solid white;
-    border-radius: 30px;
-    text-decoration: none;
-    padding: 15px 45px;
-    color: white;
-    font-size: 18px;
-    line-height: 18px;
-  }
-
-  &__text--note {
-    font-size: 14px;
-    line-height: 24px;
+  &__image img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 258px;
+    height: 285px;
+    }
   }
 }
 
 @media ($tablet-width) {
 
   .main-promo {
-    display: block;
+    min-height: 620px;
     @include container;
 
 
-  &__image {
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
+    &__image {
+      @include clearfix;
+    }
 
-  &__image img {
-    width: 470px;
-    height: 545px;
-  }
+    &__image img {
+      width: 470px;
+      height: 545px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
 
-  &__text {
-    width: 200px;
-    z-index: 200;
-    font-size: 40px;
-    text-align: center;
-  }
+    &__text {
+      display: block;
+      float: left;
+      width: 300px;
+      margin: 0;
+      padding: 0 30px;
+      margin-top: 100px;
+      z-index: 200;
+      font-size: 40px;
+      font-weight: 400;
+      text-align: center;
+      color: #ffffff;
+      box-sizing: border-box;
+    }
 
-  &__text--note {
-    background: none;
-    font-size: 18px;
-    line-height: 24px;
-  }
+    &__text--inner {
+      display: block;
+      float: none;
+      width: 500px;
+      margin: 0 auto;
+      margin-top: 80px;
+      margin-top: 75px;
+      padding: 0;
+      z-index: 200;
+      font-size: 50px;
+      box-sizing: border-box;
+    }
 
-  &__button {
-    position: absolute;
-    top: 268px;
-    left: 0;
-    z-index: 200;
+
+    &__text--note {
+      background: none;
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
-}
 }
 
 @media ($desktop-width) {
+  .main-promo {
+    display: block;
+    position: relative;
+    min-height: 745px;
+    @include container;
 
-.main-promo {
-display: block;
-position: relative;
-min-height: 745px;
-@include container;
+    &__image {
+      @include clearfix;
+    }
+    
+    &__text {
+      display: block;
+      float: left;
+      width: 300px;
+      margin: 0;
+      padding: 0 30px;
+      margin-top: 120px;
+      z-index: 200;
+      font-size: 50px;
+      box-sizing: border-box;
+    }
 
-}
-}
+    &__text--inner {
+      display: block;
+      width: 500px;
+      margin: 0 auto;
+      margin-top: 80px;
+      z-index: 200;
+      font-size: 50px;
+      box-sizing: border-box;
+    }
+
+    &__image img {
+      width: 560px;
+      height: 645px;
+      position: absolute;
+      right: 35px;
+      bottom: 0;
+      z-index: 0;
+    }
+}}

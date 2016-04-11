@@ -1,18 +1,14 @@
 .logo-text {
-  width: 100%;
+  width: 280px;
   height: 66px;
-  background-color: fade-out($bg-darkblue, 0.3);
   @include container;
-
-  &--menu-opened {
-    background-color: $bg-darkblue;
-  }
 
   & img {
     display: block;
     float: left;
     width: 75px;
     height: 22px;
+    margin-top: 21px;
   }
 }
 
@@ -23,23 +19,23 @@
     & img {
       width: 150px;
       height: 40px;
-    }
-
-    &__wrapper {
-      height: 110px;
+      margin-top: 27px;
     }
   }
 }
 
 @media ($desktop-width) {
   .logo-text {
-    display: block;
     width: auto;
     height: 110px;
+    @include container;
 
     & img {
+      diasplay: block;
+      float: left;
       width: 150px;
       height: 40px;
+      margin-top: 27px;
     }
   }	
 }

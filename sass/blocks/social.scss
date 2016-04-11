@@ -18,10 +18,22 @@
 }
 
 @media ($tablet-width) {
-  &__icon {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    border: 2px solid #e9ebec;
+  .social {
+    margin-top: 0;
+    margin-left: 70px;
+
+    &__icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 2px solid #e9ebec;
+    }
+  }
+}
+
+@media ($desktop-width) {
+  .social {
+    margin-top: 0;
+    margin-left: 220px;
   }
 }

@@ -7,17 +7,21 @@
 }
 
 @mixin container() {
-  @media ("max-width: 767px") {
+  @media ("max-width: 699px") {
     width: 280px;
     margin: 0 auto;
+    position: relative;
   }
 
-  @media ("min-width: 768px") {
+  @media ("min-width: 700px") {
     width: 620px;
+    margin: 0 auto;
+    position: relative;
   }
 
   @media ("min-width: 1200px") {
     width: 940px;
+    margin: 0 auto;
     position: relative;
   }
 }

@@ -12,37 +12,47 @@
   <body>
 
     <header class="main-header  main-header--inner">
-      <section class="logo-text">
-          <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK лого">
-        </section>
+        <section class="page-header  page-header--menu-opened">
+          <section class="logo-text">
+            <a href="index.html">
+              <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK лого">
+            </a>
+          </section>
 
-        <nav class="main-menu">
-          <div class="main-menu__toggle  main-menu__toggle--closed">
-            Открыть меню
-          </div>
-          <div class="main-menu__wrapper  main-menu__wrapper--closed">
-            <ul class="main-menu__list">
-              <li class="main-menu__item">
-                  Главная
-              </li>
-              <li class="main-menu__item">
-                <a href="photo.html">
-                  Фотографии
-                </a>
-              </li>
-              <li class="main-menu__item">
-                <a href="#">
-                  Конкурс
-                </a>
-              </li>
-              <li class="main-menu__item">
-                <a href="#">
-                  HTML Academy
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+          <nav class="main-menu">
+            <div class="main-menu__layout">
+              <div class="main-menu__toggle  main-menu__toggle--closed">
+                Открыть меню
+              </div>
+            </div>
+
+            <div class="main-menu__wrapper  main-menu__wrapper--closed">
+              <ul class="main-menu__list">
+                <li class="main-menu__item">
+                  <a href="index.html">
+                    Главная
+                  </a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="photo.html">
+                    Фотографии
+                  </a>
+                </li>
+                <li class="main-menu__item  main-menu__item--active">
+                  <a href="form.html">
+                    Конкурс
+                  </a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="https//htmlacademy.ru">
+                    HTML academy
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+          </nav>
+        </section>
 
         <section class="main-promo  main-promo--inner">
           <div class="main-promo__text  main-promo__text--inner">
@@ -64,31 +74,32 @@
               <label for="name">
                 <span class="form__label  form__label--red">
                   Имя
-                </span>
+                </span>              
+                <input type="text" name="name" id="name" placeholder="Введите Ваше имя">
               </label>
-              <input type="text" name="name" id="name" placeholder="Введите Ваше имя">
 
               <label for="surname">
                 <span class="form__label  form__label--red">
                   Фамилия
                 </span>
+                <input type="text" name="surname" id="surname" placeholder="Укажите фамилию">
               </label>
-              <input type="text" name="surname" id="surname" placeholder="Укажите фамилию">
 
               <label for="patronymic">
                 <span class="form__label  form__label--red">
                   Отчество
-                </span>
+                </span>              
+                <input type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
               </label>
-              <input type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
             </div>
           </fieldset>
 
           <fieldset class="form__set  form__set--grey">
-            <div class="form__set-wrapper">
-              <legend class="form__title  form__title--red">
-                Ваши безбашенные достижения в путешествии
-              </legend>
+
+          <legend class="form__title  form__title--red">
+            Ваши безбашенные достижения в путешествии
+          </legend>
+           <div class="form__set-wrapper">
               <input type="checkbox" id="attainment-1" checked>
               <label for="attainment-1">
                 Сделал селфи с акулой
@@ -122,6 +133,9 @@
           </fieldset>
 
           <fieldset class="form__set">
+            <legend class="form__title  form__title--red">
+              Контактная информация
+            </legend>
             <div class="form__set-wrapper">
               <label for="tel">
                 <span class="form__label form__label--red">
@@ -140,32 +154,33 @@
           </fieldset>
 
           <fieldset class="form__set form__set--grey">
-            <div class="form__set-wrapper">
-              <legend class="form__title  form__title--red">
+            <legend class="form__title  form__title--red">            
                 С каким приложением путешествовали?
-              </legend>
-              <input type="radio" name="app" id="app-1" checked>
+            </legend>
+              <div class="form__set-wrapper">
+              
               <label for="app-1">
+                <input type="radio" name="app" id="app-1" checked>
                 Pink для iOS
               </label>
 
-              <input type="radio" name="app" id="app-2">
               <label for="app-2">
+                <input type="radio" name="app" id="app-2">
                 Pink на Android
               </label>
 
-              <input type="radio" name="app" id="app-3">
               <label for="app-3">
+                <input type="radio" name="app" id="app-3">
                 Windows Phone
               </label>
             </div>
           </fieldset>
 
-          <fieldset class="form__set">
-            <div class="form__set-wrapper">
-              <legend class="form__title  form__title--red">
-                Опишите свои эмоции
-              </legend>
+          <fieldset class="form__set">           
+            <legend class="form__title  form__title--red">
+              Опишите свои эмоции
+            </legend>
+              <div class="form__set-wrapper">
               <textarea name="emotions" id="emotions" rows="6">Можно прям в красках, не стесняясь в выраженияx</textarea>
 
               <input type="submit" class="form__btn" value="Отправить форму">
@@ -211,23 +226,25 @@
         </section>
       </footer>
 
-      <footer class="inner-footer">
-        <section class="logo logo--full">
-          <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Pink логотип">
-        </section>
+      <footer class="inner-footer  inner-footer--invisible">
+        <div class="inner-footer__wrapper">
+          <section class="logo logo--full">
+            <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Pink логотип">
+          </section>
 
-        <section class="social">
-          <a href="#" class="social__icon  social__icon--twitter"></a>
-          <a href="#" class="social__icon  social__icon--facebook"></a>
-          <a href="#" class="social__icon  social__icon--youtube"></a>
-        </section>
+          <section class="social">
+            <a href="https//twitter.com" class="social__icon  social__icon--twitter"></a>
+            <a href="https//facebook.com" class="social__icon  social__icon--facebook"></a>
+            <a href="https//youtube.com" class="social__icon  social__icon--youtube"></a>
+          </section>
 
-        <section class="inner-footer__copyright">
-          <span>Разработано</span>
-          <a href="#" class="inner-footer__copyright-logo">
-            <img src=="img/htmlacademy.svg" width="27" height="34" alt="Academy логотип">
-          </a>
-        </section>
+          <section class="inner-footer__copyright">
+            <span>Разработано</span>
+            <a href="#" class="inner-footer__copyright-logo">
+              <img src="img/htmlacademy.svg" width="27" height="34" alt="Academy логотип">
+            </a>
+          </section>
+        </div>
       </footer>
 
     </body>

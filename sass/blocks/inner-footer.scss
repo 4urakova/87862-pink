@@ -26,14 +26,32 @@
 }
 
 @media ($mobile-width) {
-  &--invisible {
-    display: none;
+
+  .inner-footer {
+
+    &--invisible {
+      display: none;
+    }
   }
 }
 
 @media ($tablet-width) {
   .inner-footer {
-    @include container;
+    width: 100%;
     height: 127px;
+
+    &__wrapper {
+      @include container;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__copyright {
+      margin-top: 0;
+      margin-right: 0;
+      text-align: right;
+    }
   }
 }
