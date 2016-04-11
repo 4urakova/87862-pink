@@ -1,14 +1,266 @@
 .form {
-	min-height: 2270px;
-	outline: 2px solid red;
+  width: auto;
+  min-height: 200px;
+  margin: 0 auto;
 
-	&__intro {
-	  min-height: 92px;
-	  padding-top: 55px;
-	  margin: 0 auto;
-	  font-size: 14px;
-	  text-align: center;
-	  color: #283645;
-	  outline: 2px dashed red;
-	}
+  &__intro {
+    width: 100%;
+    min-height: 92px;
+    padding-top: 55px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-heoght: 30px;
+    text-align: center;
+    color: #283645;
+    @include container;
+  }
+
+  &__title--red {
+    width: 230px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #d22856;
+  }
+
+  &__title--grey {
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #283645;
+  }
+
+  &__title--grey sup {
+    color: #d22856;
+  }
+
+  &__set {
+    width: auto;
+    padding: 0;
+    margin: 0;
+
+    & input[type="submit"] {
+      width: 280px;
+      height: 64px;
+      background-color: #2aab6d;
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 2px;
+      border-style: none;
+    }
+
+    & input[type="checkbox"],
+    & input[type="radio"] {
+      display: none;
+    }
+
+    & input[type="checkbox"] + label,
+    & input[type="radio"] + label {
+      font-size: 18px;
+      line-height: 30px;
+      color: #283645;
+    }
+
+    & input[type="checkbox"] + label::before,
+    & input[type="radio"] + label::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -70px;
+      width: 35px;
+      height: 35px;
+      background-color: #ffffff;
+      border: 2px solid #e5e5e5;
+    }
+
+    & input[type="radio"] + label::before {
+      border-radius: 50%;
+    }
+  }
+  
+  &__label {
+    font-size: 14px;
+    line-height: 30px;
+    color: #d22856;
+    text-transform: uppercase;
+
+  }
+}
+
+@media ($mobile-width) {
+  .form {
+    &__intro span {
+      display: none;
+    }
+
+    &__set-wrapper {
+      @include container;
+    }
+
+    &__set {
+      width: 100%;
+      border: none;
+     }
+
+    &__set--grey {
+      width: 100%;
+      background-color: #f2f2f2;
+    }
+
+    &__label {
+      margin-left: 23px;
+      margin-bottom: 10px;
+    }
+
+    & input[type="text"],
+    & input[type="tel"],
+    & input[type="email"],
+    & textarea {
+      width: 100%;
+      height: 60px;
+      margin-bottom: 20px;
+      padding-left: 20px;
+      box-sizing: border-box;
+      font-size: 18px;
+      line-height: 30px;
+      color: #283645;
+    }
+
+    & textarea {
+      width: 100%;
+      height: 180px;
+      padding-left: 18px;
+      padding-top: 20px;
+      box-sizing: border-box;
+      border: 2px solid #e5e5e5;
+    }
+
+    & input[type="text"]:last-child {
+      margin-bottom: 45px;
+    }
+
+    & input[type="checkbox"] + label,
+    & input[type="radio"] + label {
+      display: block;
+      position: relative;
+      width: 210px;
+      margin-left: 70px;
+      margin-bottom: 45px;
+    }
+
+    & input[type="email"] {
+      margin-bottom: 55px;
+    }
+
+    &__label--red:first-child {
+      margin-top: 40px;
+    }
+  }
+}
+  
+@media ($tablet-width) {
+  .form {
+    @include container;
+
+      & form {
+        display: flex;
+        min-height: 2150px;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      &__intro {
+        width: 500px;
+        min-height: 92px;
+        padding-top: 100px;
+        margin: 0 auto;
+        margin-bottom: 75px;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+        color: #283645;
+      }
+
+      &__intro span {
+        padding-top: 0;
+        margin-top: 0;
+      }
+
+      &__set-wrapper {
+        margin: 0 auto;
+      }
+
+      &__set:first-child {
+        order: 1;
+        border: none;
+      }
+
+      &__set:nth-child(2) {
+        order: 4;
+      }
+
+      &__set:nth-child(3) {
+        order: 3;
+      }
+
+      &__set:nth-child(4) {
+        order: 2;
+      }
+
+      &__set:nth-child(5) {
+        order: 5;
+      }
+
+      &__set:first-child label {
+        display: inline-block;
+        width: 100%;
+        height: 60px;
+        margin-top: 50px;
+      }
+
+      &__set:first-child span {
+        width: auto;
+        padding-right: 20px;
+      }
+
+      &__set:first-child input {
+        padding-left: 20px;
+        box-sizing: border-box;
+        font-size: 18px;
+        line-height: 30px;
+        color: #283645;
+        min-width: 520px;
+      }
+
+      &__set {
+        @include container;
+        min-height: 100px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+        padding-top: 50px;
+        padding-left: 60px;
+        padding-bottom: 60px;
+        box-sizing: border-box;
+        border: 2px solid #e5e5e5;
+       }
+
+      &__title--red {
+        width: auto;
+        margin: 0 auto;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+   }
 }

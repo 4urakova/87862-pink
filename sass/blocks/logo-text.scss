@@ -1,9 +1,41 @@
 .logo-text {
-	display: block;
-	float: left;
-	width: 75px;
-	height: 22px;
-	margin-top: 20px;
-	margin-left: 20px;
-	outline: 2px solid red;
+  width: 280px;
+  height: 66px;
+  @include container;
+
+  & img {
+    display: block;
+    float: left;
+    width: 75px;
+    height: 22px;
+    margin-top: 21px;
+  }
+}
+
+@media ($tablet-width) {
+  .logo-text {
+    height: 110px;
+
+    & img {
+      width: 150px;
+      height: 40px;
+      margin-top: 27px;
+    }
+  }
+}
+
+@media ($desktop-width) {
+  .logo-text {
+    width: auto;
+    height: 110px;
+    @include container;
+
+    & img {
+      diasplay: block;
+      float: left;
+      width: 150px;
+      height: 40px;
+      margin-top: 27px;
+    }
+  }	
 }

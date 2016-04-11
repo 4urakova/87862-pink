@@ -1,7 +1,79 @@
 .main-info {
-	width: $width;
-	min-height: 218px;
-	background-color: #f2f2f2;
-	color: #283645;
-	outline: 3px solid yellow;
+    width: 320px;
+    min-height: 250px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    color: #283645;
+
+    &__header {
+      min-height: 215px;
+      background-color: $bg-white;
+    }
+
+    &__slogan {
+      padding-top: 40px;
+      font-family: "Open Sans Light", Arial, sans-serif;
+      font-size: 24px;
+      line-height: 1.25;
+      color: #283645;
+      text-align: center;     
+      @include container;
+    }
 }
+
+@media ($tablet-width) {
+
+    .main-info {
+      width: 700px;
+
+      &__slogan {
+        @include container;
+        margin-top: 58px;
+        font-size: 40px;
+        line-height: 1.25;
+      }
+
+      &__slogan:nth-child(2) {
+        width: 350px;
+        margin: 0 auto;
+        padding-top: 0;
+      }
+  }
+}
+
+@media ($desktop-width) {
+
+    .main-info {
+      width: 1200px;
+
+
+      &__slogan {
+        @include container;
+        margin-top: 78px;
+        font-size: 50px;
+        line-height: 1.25;
+      }
+
+      &__slogan:nth-child(2) {
+        width: 450px;
+        margin: 0 auto;
+        padding-top: 0;
+        padding-bottom: 80px;
+      }
+
+      &__slogan {
+        width: 820px;
+        margin-top: 73px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 50px;
+        line-height: 1.25;
+      }
+
+      &__slogan:nth-child(2) {
+        width: 450px;
+        margin: 0 auto;
+      }
+   }
+}
+

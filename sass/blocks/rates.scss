@@ -1,4 +1,12 @@
 .rates {
-	min-height: 445px;
-	outline: 4px solid blue;
+  min-height: 445px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav {
+    flex-wrap: wrap;
+  }
 }

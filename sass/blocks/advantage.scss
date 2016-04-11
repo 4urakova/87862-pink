@@ -1,0 +1,88 @@
+.advantage {
+
+  width: 100%;
+  height: 340px;
+  background-color: #ffffff;
+  margin-top: -70px;
+  position: relative;
+
+  &__wrapper {
+    @include container;
+    @include clearfix;
+  }
+
+  &__intro {
+    display: block;
+    float: right;
+    width: 310px;
+    height: 280px;
+    margin-left: 10px;
+    text-align: left;
+  }
+
+  &__intro h3 {
+    display: block;
+    width: 170px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+  &__intro p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__intro a {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    color: #d22856;
+  }
+
+
+  &__image {
+    display: block;
+    float: left;
+    width: 240px;
+    height: 275px;
+  }
+}
+
+@media ($mobile-width) {
+  .advantage {
+    display: none;
+  }
+}
+
+@media ($desktop-width) {
+  .advantage {
+    background-color: #f2f2f2;
+    margin-top: 30px;
+
+    &__image {
+      width: 300px;
+      height: 345px;
+      padding-bottom: 60px;
+    }
+
+    &__intro {
+      width: 570px;
+      text-align: left;
+    }
+
+    &__intro h3 {
+      line-height: 30px;
+    }
+
+    &__intro p {
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+     &__intro a {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}

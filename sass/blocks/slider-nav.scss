@@ -1,0 +1,29 @@
+  .slider-nav {
+    width: 70px;
+    height: 15px;
+    text-align: center;
+    margin: 0 auto;
+
+    &__switcher {
+      opacity: 0;
+    }
+
+    &__btn {
+      display: inline-block;
+      vertical-align: top;
+      width: 6px;
+      height: 6px;
+      margin: 0 3px;
+      background-color: #bec2c7;
+      border: 3px solid white;
+      border-radius: 50%;
+      cursor: pointer;
+      }
+
+    
+    #review-1:checked ~ label[for="review-1"],
+    #review-2:checked ~ label[for="review-2"],
+    #review-3:checked ~ label[for="review-3"] {
+      border: 3px solid black;
+    }
+}

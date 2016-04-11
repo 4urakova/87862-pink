@@ -1,11 +1,187 @@
 .main-menu {
-	display: block;
-	width: $width;
-	min-height: 66px;
-	background-color: #1c2630;
-	outline: 4px solid blue;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 65px;
+  position: relative;
+  z-index: 2000;
 
-	&__list, &__toggle {
-	  display: none;
-	}
+  &__layout {
+    @include container;
+
+  }
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__toggle {
+    position: absolute;
+    top: -55px;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    cursor: pointer;
+  }
+
+  &__toggle--closed::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 0 0 #ffffff,
+    0 24px 0 0 #ffffff;
+  }
+
+  &__toggle--opened::before,
+  &__toggle--opened::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 18px;
+    width: 25px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  &__toggle--opened::before {
+    transform: rotate(45deg);
+  }
+
+  &__toggle--opened::after {
+    transform: rotate(-45deg);
+  }
+
+
+  &__wrapper--closed &__list {
+    display: none;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  &__item {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__item a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    padding-bottom: 13px;
+    font-size: 18px;
+    line-height: 32px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    background-color: $bg-darkblue;
+    border-top: 1px solid #485461;
+    border-bottom: 1px solid #283544;
+    box-sizing: border-box;
+  }
+}
+
+
+@media ($tablet-width) {
+
+  .main-menu {
+
+    &__toggle {
+      top: -80px;
+      right: 0;
+    }
+
+    &__layout {
+      position: relative;
+      @include container;
+    }
+  }
+}
+
+
+@media ($desktop-width) {
+
+  .main-menu {
+    min-width: 670px;
+    min-height: 70px;
+    margin: 0;
+
+    &__layout {
+      display: none;
+    }
+  
+    &__wrapper {
+      height: 110px;
+      @include container;
+      @include clearfix;
+    }
+  
+    &__list {
+      @include clearfix;
+      display: block;
+      float: right;
+      min-width: 670px;
+      height: 110px;
+      margin-top: -110px;
+      font-size: 0;
+    }
+
+    &__wrapper--closed &__list {
+      display: block;
+    }
+
+    &__item {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 18px;
+      line-height: 18px;
+      text-align: right;
+    }
+ 
+    &__item a {
+      display: block;
+      position: relative;
+      margin-top: 25px;
+      margin-right: 0;
+      margin-bottom: 23px;
+      padding-left: 80px;
+      padding-right: 0;     
+      font-weight: 400;
+      background: none;
+      text-transform: none;
+      border: none;
+    }
+
+    &__item a:hover::after { 
+      content: " ";
+      position: absolute;
+      top: 50px;
+      left: 80px;
+      right: 0;
+      background: #ffffff;
+      height: 2px;
+    }
+
+    &__item a:active::after {
+      display: none;
+    }
+
+    &__item a:active {
+      opacity: 0.3;
+    }
+  }
 }

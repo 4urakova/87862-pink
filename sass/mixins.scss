@@ -1,0 +1,39 @@
+@mixin clearfix() {
+  &::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container() {
+  @media ("max-width: 699px") {
+    width: 280px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  @media ("min-width: 700px") {
+    width: 620px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  @media ("min-width: 1200px") {
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+@mixin container-fluid() {
+
+  @media ($mobile-width) {
+    width: auto;
+  }
+
+  @media ($tablet-width) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

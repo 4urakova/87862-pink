@@ -1,9 +1,21 @@
 .rate-lists {
-	padding-top: 65px;
-	min-height: 280px;
-	outline: 2px dashed blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 
 	&__list:not(:first-of-type) {
 	  display: none;
 	  }
+
+	&__list {
+	  display: flex;
+	  flex-direction: column;
+	}
+
+	&__header {
+	  @include container-fluid;
+	  height: 100px;
+	  background-color: $bg-darkblue;
+	}
 }

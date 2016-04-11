@@ -1,10 +1,85 @@
 .reviews {
-	min-height: 354px;
-	background: white;
-	outline: 3px solid red;
+  width: 320px;
+  min-height: 312px;
+  background-color: #ffffff;
+  padding-top: 42px;
+  margin-top: -42px;
 
-	&__item:not(:first-of-type) {
-	  display: none;
-	}
+  &__item:not(:first-of-type) {
+    display: none;
+  }
 
+  &__item h3 {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+
+  &__intro {  
+    font-size: 14px;
+    line-height: 30px;
+  }
 }
+
+@media ($mobile-width) {
+  .reviews {
+    margin-top: -45px;
+    position: relative;
+
+    &__wrapper {
+      @include container;
+      text-align: center;
+    }
+
+    &__details {
+      display: none;
+    }
+  }
+}
+
+@media ($tablet-width) {
+  .reviews {
+    width: 100%;
+    min-height: 350px;
+    margin-top: 0;
+    padding-top: 0;
+    position: relative;
+
+    &__wrapper {
+      @include container;
+      text-align: center;
+    }
+    
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+      min-height: 280px;
+    }
+
+    &__item p {
+      order: 1;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    &__item h3 {
+      order: 2;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 700;
+      margin: 0;
+      margin-top: 45px;
+      margin-bottom: 15px;
+    }
+
+    &__details {
+      order: 3;
+      font-size: 14px;
+      line-height: 30px;
+      color: #283645;
+    }
+  }
+}
+@media ($desktop-width) {}
