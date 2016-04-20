@@ -1,5 +1,60 @@
 .filter {
-	height: 758px;
-	margin: 0 auto;
-	outline: 3px solid blue;
+  width: auto;
+  min-height: 100px;
+  padding-top: 20px;
+  background-color: #f2f2f2;
+
+  &__wrapper {
+  	@include container;
+  }
+
+  &--buttons {
+  	padding-top: 38px;
+  	padding-bottom: 31px;
+  	border-top: 2px solid #dddfe0;
+  }
+
+  &__image {
+  	width: auto;
+  	height: 375px;
+  }
+
+  &__btn {
+    display: block;
+    width: 280px;
+    height: 49px;
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+    color: #d22856;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    border: 3px solid #d22856;
+    border-radius: 30px;
+  }
+
+  &__btn:hover {
+    color: #ffffff;
+    background-color: #d22856;
+  }
+
+  &__btn:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #d22856;
+  }
+
+  &__btn--grey {
+  	color: #283645;
+  	border: 3px solid #283645;
+  	opacity: 0.1;
+  }
+
+  &__btn--grey:hover {
+  	opacity: 0.3;
+  	background-color: transparent;
+  }
+
+  &__btn--grey:active {
+  	background-color: #b5b9be;
+  }
 }

@@ -1,7 +1,11 @@
-.logo img{
+.logo svg {
 	display: block;
 	margin-bottom: 40px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 40px;
+	margin-top: 40px;
+
+  & svg:hover &__letter {
+    fill: #d22856;
+  }
 }

@@ -7,9 +7,8 @@
     width: 100%;
     min-height: 92px;
     padding-top: 55px;
-    margin: 0 auto;
     font-size: 14px;
-    line-heoght: 30px;
+    line-height: 30px;
     text-align: center;
     color: #283645;
     @include container;
@@ -18,8 +17,7 @@
   &__title--red {
     width: 230px;
     margin: 0 auto;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
@@ -42,10 +40,9 @@
     color: #d22856;
   }
 
-  &__set {
-    width: auto;
-    padding: 0;
-    margin: 0;
+  &__title--grey span {
+    display: none;
+  }
 
     & input[type="submit"] {
       width: 280px;
@@ -66,7 +63,7 @@
     }
 
     & input[type="checkbox"] + label,
-    & input[type="radio"] + label {
+    & input[type="radio"] + label{
       font-size: 18px;
       line-height: 30px;
       color: #283645;
@@ -87,7 +84,39 @@
     & input[type="radio"] + label::before {
       border-radius: 50%;
     }
-  }
+
+    & input[type="text"],
+    & input[type="tel"],
+    & input[type="email"],
+    & textarea {
+      width: 100%;
+      height: 60px;
+      margin-bottom: 15px;
+      padding-left: 20px;
+      box-sizing: border-box;
+      font-size: 18px;
+      line-height: 30px;
+      color: #283645;
+      border: 2px solid #e5e5e5;
+    }
+
+    & textarea {
+      width: 100%;
+      height: 180px;
+      padding-left: 18px;
+      padding-top: 20px;
+      box-sizing: border-box;
+      border: 2px solid #e5e5e5;
+    }
+
+    & input[type="checkbox"] + label,
+    & input[type="radio"] + label {
+      display: block;
+      position: relative;
+      margin-left: 70px;
+      margin-bottom: 45px;
+    }
+
   
   &__label {
     font-size: 14px;
@@ -100,21 +129,31 @@
 
 @media ($mobile-width) {
   .form {
+
     &__intro span {
       display: none;
     }
 
-    &__set-wrapper {
+    &__set {
+      padding: 0;
+      margin: 0;
+      border: none;
       @include container;
     }
 
-    &__set {
+    &__set-layout {
       width: 100%;
-      border: none;
+      padding-top: 40px;
+      padding-bottom: 40px;
      }
 
-    &__set--grey {
+    &__set-layout:first-child {
+      padding-top: 0;
+    }
+
+    &__set-layout--grey {
       width: 100%;
+      padding-bottom: 0;
       background-color: #f2f2f2;
     }
 
@@ -123,69 +162,32 @@
       margin-bottom: 10px;
     }
 
-    & input[type="text"],
-    & input[type="tel"],
-    & input[type="email"],
-    & textarea {
-      width: 100%;
-      height: 60px;
-      margin-bottom: 20px;
-      padding-left: 20px;
-      box-sizing: border-box;
-      font-size: 18px;
-      line-height: 30px;
-      color: #283645;
-    }
-
-    & textarea {
-      width: 100%;
-      height: 180px;
-      padding-left: 18px;
-      padding-top: 20px;
-      box-sizing: border-box;
-      border: 2px solid #e5e5e5;
-    }
-
-    & input[type="text"]:last-child {
-      margin-bottom: 45px;
-    }
-
-    & input[type="checkbox"] + label,
-    & input[type="radio"] + label {
-      display: block;
-      position: relative;
-      width: 210px;
-      margin-left: 70px;
-      margin-bottom: 45px;
-    }
-
-    & input[type="email"] {
-      margin-bottom: 55px;
-    }
-
     &__label--red:first-child {
       margin-top: 40px;
+    }
+
+    &__set-layout:nth-child(3) legend {
+      display: none;
     }
   }
 }
   
 @media ($tablet-width) {
   .form {
-    @include container;
 
       & form {
         display: flex;
-        min-height: 2150px;
+        min-height: 200px;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: flex-start;
       }
 
       &__intro {
-        width: 500px;
-        min-height: 92px;
+        @include container;
         padding-top: 100px;
-        margin: 0 auto;
-        margin-bottom: 75px;
+        padding-left: 60px;
+        padding-bottom: 70px;
+        padding-right: 60px;
         font-size: 18px;
         line-height: 30px;
         text-align: center;
@@ -197,63 +199,102 @@
         margin-top: 0;
       }
 
-      &__set-wrapper {
-        margin: 0 auto;
+      &__set-layout {
+        margin: 0;
+        padding: 0;
+        @include container;
       }
 
-      &__set:first-child {
+      &__set-layout:first-child {
         order: 1;
-        border: none;
       }
 
-      &__set:nth-child(2) {
+      &__set-layout:nth-child(2) {
         order: 4;
       }
 
-      &__set:nth-child(3) {
+      &__set-layout:nth-child(3) {
         order: 3;
       }
 
-      &__set:nth-child(4) {
+      &__set-layout:nth-child(4) {
         order: 2;
       }
 
-      &__set:nth-child(5) {
+      &__set-layout:nth-child(5) {
         order: 5;
       }
 
-      &__set:first-child label {
-        display: inline-block;
-        width: 100%;
-        height: 60px;
-        margin-top: 50px;
-      }
-
-      &__set:first-child span {
+      &__set-layout:first-child label {
+        align-self: center;
         width: auto;
         padding-right: 20px;
       }
 
-      &__set:first-child input {
+      &__set-layout:first-child input {
         padding-left: 20px;
         box-sizing: border-box;
         font-size: 18px;
         line-height: 30px;
         color: #283645;
-        min-width: 520px;
+      }
+
+      &__set-layout:first-child  &__set {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: none;
+      }
+
+      &__line {
+        display: flex;
+        flex-direction: row;
+        height: 60px;        
+        margin-bottom: 50px;
       }
 
       &__set {
-        @include container;
-        min-height: 100px;
-        margin: 0 auto;
-        margin-bottom: 60px;
-        padding-top: 50px;
+        margin: 0;
+        padding-top: 40px;
         padding-left: 60px;
-        padding-bottom: 60px;
+        padding-right: 60px;
+        padding-bottom: 35px;
+        margin-bottom: 60px;
         box-sizing: border-box;
         border: 2px solid #e5e5e5;
        }
+
+      &__set-layout:nth-child(3) input {
+        position: relative;
+        margin-top: 0;
+      }
+
+      &__set-layout:nth-child(3) &__set {
+        padding-top: 15px;
+        padding-bottom: 0;
+      }
+
+      &__set-layout:nth-child(3) label:first-of-type {
+        position: absolute;
+        top: 120px;
+      }
+
+      &__set-layout:nth-child(3) label:nth-of-type(2) {
+        position: absolute;
+        top: 250px;
+        left: 60px;
+      }
+
+      &__set--sending {
+        border: none;
+        padding: 0;
+        @include clearfix;
+     }
 
       &__title--red {
         width: auto;
@@ -262,5 +303,161 @@
         margin-bottom: 20px;
       }
 
+      & input[type="submit"] {
+        display: block;
+        float: left;
+        width: 300px;
+        height: 64px;
+      }
+
+      &__title--grey {
+        display: block;
+        float: right;
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: right;
+      }
    }
+}
+
+@media ($desktop-width) {
+
+  .form {
+
+    & form {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+      @include container;
+    }
+
+    &__intro {
+      padding-top: 100px;
+      padding-left: 60px;
+      padding-bottom: 70px;
+      padding-right: 60px;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+      color: #283645;
+      @include container;
+    }
+
+    &__set-layout:first-child,
+    &__set-layout:nth-child(4)  {
+      width: 435px;
+      height: 310px;
+    }
+
+    &__set-layout:first-child {
+      margin-left: 0;
+      margin-right: 35px;
+      margin-bottom: 50px;
+    }
+
+    &__set-layout:nth-child(4) {
+      margin-left: 35px;
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
+
+    &__set {
+      margin: 0;
+      padding-top: 40px;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      box-sizing: border-box;
+      border: 2px solid #e5e5e5;
+     }
+
+    &__set-layout:first-child  &__set {
+      padding-top: 25px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      box-sizing: border-box;
+    }
+
+    &__set-layout:nth-child(3) {
+      margin-bottom: 55px;
+    }
+
+    &__set-layout:nth-child(3) &__set {
+      min-height: 100px;
+      padding-top: 35px;
+      padding-bottom: 15px;
+      @include clearfix;
+    }
+
+    &__set-layout:nth-child(3) &__line:first-of-type {
+      display: block;
+      float: left;
+      width: 370px;
+      height: 100px;
+      margin-bottom: 0;
+    }
+
+    &__set-layout:nth-child(3) &__line:nth-of-type(2) {
+      display: block;
+      float: right;
+      width: 370px;
+      height: 100px;
+      margin-bottom: 0;
+    }
+
+    &__set-layout:nth-child(3) label:first-of-type {
+      top: 140px;
+    }
+
+    &__set-layout:nth-child(2) &__set {
+      padding-right: 50px;
+      margin-bottom: 55px;
+      @include clearfix;
+    }
+
+    &__checkbox-group {
+      display: block;
+      float: left;
+      min-width: 200px;
+      min-height: 40px;
+      margin-right: 50px;
+    }
+
+    &__checkbox-group:nth-of-type(3) {
+      float: right;
+      margin-right: 0;
+    }
+
+    &__set-layout:nth-child(5) &__set:first-of-type {
+      padding-bottom: 40px;
+      margin-bottom: 65px;
+    }
+
+    & textarea {
+      height: 125px;
+      margin: 0;
+    }
+
+    &__set--sending {
+      border: none;
+      padding: 0;
+      margin-bottom: 40px;
+      @include clearfix;
+    }
+
+    &__title--grey {
+      width: 325px;
+    }
+
+    &__title--grey span {
+      display: inline;
+    }
+  }
 }

@@ -1,9 +1,9 @@
 .advantage {
 
   width: 100%;
-  height: 340px;
+  height: 280px;
+  padding-top: 60px;
   background-color: #ffffff;
-  margin-top: -70px;
   position: relative;
 
   &__wrapper {
@@ -58,12 +58,13 @@
 @media ($desktop-width) {
   .advantage {
     background-color: #f2f2f2;
+    padding-top: 0px;
+    padding-bottom: 60px;
     margin-top: 30px;
 
     &__image {
       width: 300px;
       height: 345px;
-      padding-bottom: 60px;
     }
 
     &__intro {

@@ -11,9 +11,18 @@
     text-align: center;
   }
 
-  &__copyright-logo {
+  &__copyright-logo svg {
     display: inline-block;
     vertical-align: middle;
+    fill: #d22856;
+  }
+
+  &__copyright-logo:hover svg {
+    fill: #283645;
+  }
+
+  &__copyright-logo:active svg {
+    opacity: 0.3;
   }
 
   &__copyright span {
@@ -53,5 +62,11 @@
       margin-right: 0;
       text-align: right;
     }
+  }
+}
+
+@media ($desktop-width) {
+  .inner-footer {
+    height: 160px;
   }
 }

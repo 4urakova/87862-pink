@@ -1,12 +1,236 @@
-.photo {
-	width: 280px;
-	height: 300px;
-	margin-left: auto;
-	margin-bottom: 20px;
-	margin-right: auto;
-	outline: 2px dashed green;
+.photo { 
+  min-height: 137px;
 
-	&__image {
-	  margin: 0;
-	}
+  &:not(:first-of-type) {
+    padding-top: 20px;
+  }
+
+  &__panorama {
+    width: 100%;
+    max-width: 320px;
+    height: 137px;
+    margin: 0 auto;
+    padding-top: 0;
+    background-image: url("../img/panorama-mobile.jpg");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: 320px auto;
+  }
+
+  @media(min-resolution: 144dpi),(min-resolution: 1.5dppx) {
+
+    &__panorama {
+      width: 320px;
+      height: 137px;
+      background-image: url("../img/panorama-mobile@2x.jpg");
+      background-position: 50% 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 280px;
+    height: 180px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    @include container;
+  }
+
+  &__image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__marker {
+    width: auto;
+    position: absolute;
+    top: -138px;
+    right: 0;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    background-color: #d22856;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  &__description {
+    min-height: 95px;
+    padding-left: 15px;
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    background-color: #f2f2f2;
+    font-size: 14px;
+    line-height: 24px;
+    color: #283645;
+  }
+
+  &__author {
+    font-weight: bold;
+  }
+
+  &__comment {
+    font-weight: normal;
+  }
+
+  &__time {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  &__likes {
+    padding-top: 15px;
+    padding-left: 33px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #d22856;
+  }
+}
+
+@media ($mobile-width) {
+  .photo { 
+
+    &:not(:first-of-type) {
+      @include container;
+    }
+
+    &__description {
+      @include container;
+    }
+  }
+}
+
+@media ($tablet-width) {
+
+  .photo:not(:first-of-type) {
+    margin: 0;
+    width: 300px;
+
+
+    &__description {
+      width: 300px;
+      box-sizing: border-box;
+    }
+
+    &__description-panorama {
+      @include container;
+    }
+  }
+
+  .photo {
+
+    &__image {
+      width: 300px;
+      height: 300px;
+    }
+
+    &__panorama {
+      width: 100%;
+      max-width: 700px;
+      height: 509px;
+      background-image: url("../img/panorama-tablet.jpg");
+      background-position: 50% 0;
+      background-repeat: no-repeat;
+      background-size: 700px auto;
+    }
+
+    @media(min-resolution: 144dpi),(min-resolution: 1.5dppx) {
+
+      &__panorama {
+        width: 700px;
+        height: 509px;
+        background-image: url("../img/panorama-tablet@2x.jpg");
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        background-size: 700px auto;
+      }
+    }
+
+    &__marker {
+      top: -454px;
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    &__description--panorama {
+      @include container;
+    }
+
+    &__author {
+      order: 1;
+    }
+
+    &__comment {
+      order: 3;
+      min-height: 50px;
+    }
+
+    &__description--panorama  &__likes {
+      order: 2;
+      padding-top: 0;
+      padding-right: 33px;
+    }
+
+    &__likes {
+      order: 5;
+      padding-left: 0;
+      padding-right: 100px;
+    }
+  }
+}
+
+@media ($desktop-width) {
+  .photo {
+
+  &__image {
+    width: 300px;
+    height: 400px;
+  }
+
+
+  &__panorama {
+    width: 100%;
+    max-width: 1200px;
+    height: 506px;
+    margin: 0 auto;
+    background-image: url("../img/panorama-desktop.jpg");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: 1200px auto;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+
+
+    @media(min-resolution: 144dpi),(min-resolution: 1.5dppx) {
+
+      &__panorama {
+        background-image: url("../img/panorama-desktop@2x.jpg");
+      }
+    }
+  }
 }

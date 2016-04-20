@@ -6,7 +6,6 @@ body {
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
-  сolor: white;
 }
 
 @font-face {
@@ -43,6 +42,7 @@ body {
 @import "blocks/logo-text.scss";
 @import "blocks/main-menu.scss";
 @import "blocks/main-promo.scss";
+@import "blocks/modal-content.scss";
 @import "blocks/systems.scss";
 @import "blocks/main-info.scss";
 @import "blocks/features.scss";

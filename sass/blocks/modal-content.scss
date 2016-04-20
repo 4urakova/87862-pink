@@ -1,0 +1,40 @@
+.modal-content {
+  display: none;
+  width: 100%;
+  padding-top: 45px;
+  padding-bottom: 50px;
+  text-align: center;
+
+  &__wrapper {
+  	@include container;
+  }
+
+  & button {
+    width: 280px;
+    height: 64px;
+    background-color: #2aab6d;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 2px;
+    border-style: none;
+  }
+
+  & h3 {
+    margin: 0;
+    margin-bottom: 35px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  & p {
+  	margin: 0;
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+  }
+}

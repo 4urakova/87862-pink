@@ -18,3 +18,12 @@
     }
   }
 }
+
+@media ($tablet-width) {
+  .index-footer {
+
+    &--invisible {
+      display: none;
+    }
+  }
+}

@@ -1,4 +1,65 @@
 .photos {
-	min-height: 2655px;
-	outline: 3px solid green;
+  width: auto;
+  min-height: 200px;
+  margin: 0 auto;
+
+  &__intro {
+    width: 100%;
+    min-height: 92px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: #283645;
+    @include container;
+  }
+
+   &__gallery .photo:first-child {
+      margin: 0;
+      min-width: 280px;
+      padding-top: 20px;
+    }
+}
+
+@media ($tablet-width) {
+  .photos {
+    &__intro {
+      padding-top: 100px;
+      padding-left: 80px;
+      padding-right: 80px;
+      padding-bottom: 80px;
+      font-size: 18px;
+    }
+
+    &__gallery {
+      @include container;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 30px;
+    }
+
+    &__gallery .photo:first-child {
+      width: 300px;
+    }
+  }
+}
+
+@media ($desktop-width) {
+  .photos {
+    &__gallery {
+      @include container;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 30px;
+    }
+
+    &__gallery .photo:first-child {
+      width: 300px;
+    }
+  }
 }

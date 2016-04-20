@@ -8,12 +8,23 @@
   margin-top: 35px;
   
   &__icon {
-    display: block;
-    position: relative;
+    display: flex;
     width: 45px;
     height: 45px;
     border-radius: 50%;
     border: 3px solid #e9ebec;
+  }
+
+  &__icon img {
+    margin: auto;
+  }
+
+  &__icon:hover {
+    border: 3px solid #283645;
+  }
+
+  &__icon:active {
+    opacity: 0.3;
   }
 }
 

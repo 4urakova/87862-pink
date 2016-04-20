@@ -10,7 +10,6 @@
     text-align: center;
     color: #ffffff;
   }
-
 }
 
 @media ($mobile-width) {
@@ -20,6 +19,7 @@
 
   &--inner {
     height: 173px;
+    @include container;
   }
 
   &__text {
@@ -35,12 +35,13 @@
     padding-bottom: 50px;
   }
 
-  &__image img{
+  &__image img {
+    width: 258px;
+    height: 286px;
     position: absolute;
+    z-index: 0;
     left: 0;
     bottom: 0;
-    width: 258px;
-    height: 285px;
     }
   }
 }
@@ -51,16 +52,19 @@
     min-height: 620px;
     @include container;
 
+    &--inner {
+      min-height: 230px;
+    }
 
     &__image {
       @include clearfix;
     }
 
     &__image img {
-      width: 470px;
+      width: 700px;
       height: 545px;
       position: absolute;
-      right: 0;
+      left: 0;
       bottom: 0;
       z-index: 0;
     }
@@ -81,16 +85,25 @@
     }
 
     &__text--inner {
-      display: block;
       float: none;
-      width: 500px;
-      margin: 0 auto;
-      margin-top: 80px;
-      margin-top: 75px;
-      padding: 0;
-      z-index: 200;
+      width: auto;
+      padding-top: 69px;
+      padding-left: 60px;
+      padding-bottom: 75px;
+      padding-right: 60px;
       font-size: 50px;
-      box-sizing: border-box;
+      line-height: 1.25;
+    }
+
+    &__text--inner-photo {
+      float: none;
+      width: auto;
+      padding-top: 80px;
+      padding-left: auto;
+      padding-bottom: 145px;
+      padding-right: auto;
+      font-size: 50px;
+      line-height: 1.25;
     }
 
 
@@ -109,6 +122,10 @@
     min-height: 745px;
     @include container;
 
+    &--inner {
+      min-height: 295px;
+    }
+
     &__image {
       @include clearfix;
     }
@@ -126,21 +143,33 @@
     }
 
     &__text--inner {
-      display: block;
-      width: 500px;
-      margin: 0 auto;
-      margin-top: 80px;
+      width: auto;
+      float: none;
+      padding-top: 70px;
+      padding-left: 60px;
+      padding-right: 60px;
+      margin-top: 0;
       z-index: 200;
       font-size: 50px;
       box-sizing: border-box;
     }
 
+    &__text--inner-photo {
+      width: auto;
+      float: none;
+      margin-top: 0;
+      padding-top: 70px;
+      padding-left: 200px;
+      padding-right: 200px;
+    }
+
     &__image img {
-      width: 560px;
+      width: 1050px;
       height: 645px;
       position: absolute;
-      right: 35px;
+      left: 0;
       bottom: 0;
       z-index: 0;
     }
-}}
+  }
+}
